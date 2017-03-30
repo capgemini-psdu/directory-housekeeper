@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.capgemini</groupId>
+	<artifactId>directory-housekeeper</artifactId>
+	<version>1.0.0</version>
+
+	<name>directory-housekeeper</name>
+	<description>A utility for housekeeping directories.</description>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Our release repo</name>
+			<url>http://artifactory.capgemini-psdu.com/artifactory/libs-release-local</url>
+		</repository>
+		<!-- Disallow deploy of snapshot versions -->
+	</distributionManagement>
+
+	<properties>
+		<!-- Alphabetical order -->
+		<commons.codec.version>1.9</commons.codec.version>
+		<java.version>1.8</java.version>
+		<junit.version>4.12</junit.version>
+		<spring.boot.version>1.5.2.RELEASE</spring.boot.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons.codec.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
