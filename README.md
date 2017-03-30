@@ -1,4 +1,4 @@
-# housekeeper
+# Directory Housekeeper
 Contains a DirectoryHousekeeper class that provides simple directory housekeeping functionality. Clients must declare a bean of type DirectoryHousekeeper and provide it with:
 * The directory path to be housekept
 * The number of days to retain files.
